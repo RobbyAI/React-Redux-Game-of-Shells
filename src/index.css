@@ -1,0 +1,21 @@
+body {margin:0;padding:0;font-family:sans-serif;}
+
+h2, h5, .center {text-align:center;}
+hr {margin:0;}
+
+button {background-color:#5271a5;color:#fff;font-size:.8em;border:none;border-radius:5px;padding:5px 10px;cursor:pointer;}
+
+.list {padding-top:30px;height:18px;}
+  ul {padding:0;margin:0;position:relative;}
+    li.inline {display:inline-block;position:relative;height:30px;text-align:center;vertical-align:middle;}
+      li.inline label {width:100%;color:transparent;}
+      li.inline > div {transition-duration:0.5s;background-color:rgba(244,55,23,1);width:50%;height:100%;position:relative;top:-30px;border-radius:15px 15px 0 0;margin:auto;z-index:10;cursor:pointer;}
+      li.inline > div:hover {transform:translateY(-30px);}
+
+  li.ball {display:inline-block;text-align:center;vertical-align:middle;}
+    li.ball input {position:absolute;transition-duration:0.5s;transition-property:left;top:-30px;}
+
+footer {padding:20px 0;background-color:#eaeaea;}
+  footer > div {width:33%;display:inline-block;}
+    footer > div > input[type="number"] {width:40px;border:none;border-radius:5px;}
+    footer > div > span {font-size:.7em;color:#555;padding:5px 10px;}
