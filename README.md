@@ -35,4 +35,4 @@ yarn test
 # Demo
 
 An online version can be tested here:
-* http://ame-of-shells.robby.ai
+* http://game-of-shells.robby.ai
