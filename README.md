@@ -30,3 +30,9 @@ npm run build
 ```sh
 yarn test
 ```
+
+
+# Demo
+
+An online version can be tested here:
+* http://ame-of-shells.robby.ai
