@@ -16,7 +16,7 @@ cd React-Redux-Game-of-Shells
 yarn install
 ```
 
-- Start your local node server for testing with the React-Redux-Game-of-Shells Web-App:
+- Start your local node server for testing:
 ```sh
 yarn start
 ```
@@ -26,7 +26,7 @@ yarn start
 npm run build
 ```
 
-- Launch unit tests:
+- Launch Jest unit tests:
 ```sh
 yarn test
 ```
