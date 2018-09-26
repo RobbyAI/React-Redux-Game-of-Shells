@@ -14,6 +14,10 @@ export default class ShellList extends Component {
     isSuccess: PropTypes.func.isRequired
   }
 
+  input = null
+  curPos = 0
+
+  
   constructor(props, state) {
     super(props)
     this.state = {}
@@ -38,7 +42,6 @@ export default class ShellList extends Component {
   }
 
   render() {
-    console.log('RENDER')
     return (
       <div className="list">
         {this._getList()}
@@ -86,10 +89,7 @@ export default class ShellList extends Component {
 
   _onMouseOver(index) {
     const { isSuccess } = this.props
-    //if (this.curPos === index) {
-      //alert('Great!')
-      isSuccess(this.curPos === index)
-    //}
+    isSuccess(this.curPos === index)
   }
 
   _updateposition() {
@@ -110,7 +110,9 @@ export default class ShellList extends Component {
     const _goto = shells[pos].id + 1
 
     this.curPos = shells[pos].id
-    this.input.style.left = `calc(((100%/${len}) * ${_goto}) - (100%/${len})/2 - 7px)`
+    if (this.input) {
+      this.input.style.left = `calc(((100%/${len}) * ${_goto}) - (100%/${len})/2 - 7px)`
+    }
 
     this.timeout = setTimeout(() => {
       this._setPosition(++pos)
