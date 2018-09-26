@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { selectShell } from '../actions'
+import { isSuccess } from '../actions'
 import ShellList from '../components/ShellList'
 
 const mapStateToProps = state => ({
@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  selectShell: id => dispatch(selectShell(id))
+  isSuccess: success => dispatch(isSuccess(success))
 })
 
 export default connect(

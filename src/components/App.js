@@ -1,5 +1,6 @@
 import React from 'react'
 import List from '../containers/List'
+import Result from '../containers/Result'
 import Reorder from '../containers/Reorder'
 import Speed from '../containers/Speed'
 import Add from '../containers/Add'
@@ -11,6 +12,7 @@ const App = () => (
     <hr />
     <List />
     <hr />
+    <Result />
     <footer>
       <Reorder />
       <Speed />

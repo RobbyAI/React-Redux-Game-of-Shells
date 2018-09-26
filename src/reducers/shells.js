@@ -1,37 +1,22 @@
+import Constants from '../constants'
+
 const shells = (state = [], action) => {
   switch (action.type) {
-    case 'ADD_A_SHELL':
-      return [
-        ...state,
-        {
-          id: action.id,
-          selected: false
-        }
-      ]
 
+    // -- Add a new `shell` to the current `shells` list.
+    case 'ADD_A_SHELL':
+      return [ ...state, { id: action.id }]
+
+    // -- Randomly reorder the `shells`.
     case 'REORDER_SHELLS':
       return [...state].sort(() => (Math.random()<.5)?-1:1)
 
-    case 'SELECT_SHELL':
-      return state.map(shell => {
-        return { ...shell, selected: (shell.id === action.id)?true:false }
-      })
-
+    // -- Current `shells` or by default create an array of object that contains
+    // -- the minimum containers defined in the constants.
     default:
-      return [
-        {
-          id: 0,
-          selected: false
-        },
-        {
-          id: 1,
-          selected: true
-        },
-        {
-          id: 2,
-          selected: false
-        }
-      ]
+      return state.length ?
+        state :
+        Array.from(new Array(Constants.NUM_CONTAINER), (v,i) => { return { id: i }})
   }
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const ReorderShells = ({ shells, reorderShells }) => (
+const ReorderButton = ({ shells, reorderShells }) => (
   <div className="center">
     <form
 			onSubmit={e => {
@@ -16,14 +16,13 @@ const ReorderShells = ({ shells, reorderShells }) => (
   </div>
 )
 
-ReorderShells.propTypes = {
+ReorderButton.propTypes = {
   shells: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      selected: PropTypes.bool.isRequired
     }).isRequired
   ).isRequired,
   reorderShells: PropTypes.func.isRequired
 }
 
-export default ReorderShells
+export default ReorderButton

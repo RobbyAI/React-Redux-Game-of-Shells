@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import { addShell } from '../actions'
-import AddShell from '../components/AddShell'
+import AddShellButton from '../components/AddShellButton'
 
 const mapStateToProps = state => ({
   shells: state.shells
@@ -13,4 +13,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(AddShell)
+)(AddShellButton)

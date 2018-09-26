@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import { reorderShells } from '../actions'
-import ReorderShells from '../components/ReorderShells'
+import ReorderButton from '../components/ReorderButton'
 
 const mapStateToProps = state => ({
   shells: state.shells
@@ -13,4 +13,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ReorderShells)
+)(ReorderButton)

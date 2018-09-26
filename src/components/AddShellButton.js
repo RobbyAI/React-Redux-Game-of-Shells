@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const AddShell = ({ shells, addShell }) => {
+const AddShellButton = ({ shells, addShell }) => {
   return (
     <div className="center">
       <form
@@ -13,21 +13,20 @@ const AddShell = ({ shells, addShell }) => {
         }}
       >
         <button type="submit">
-          Add a Shell
+          + Shell
         </button>
       </form>
     </div>
   )
 }
 
-AddShell.propTypes = {
+AddShellButton.propTypes = {
   shells: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      selected: PropTypes.bool.isRequired
     }).isRequired
   ).isRequired,
   addShell: PropTypes.func.isRequired
 }
 
-export default AddShell
+export default AddShellButton
