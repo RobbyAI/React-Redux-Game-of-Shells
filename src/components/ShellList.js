@@ -17,7 +17,6 @@ export default class ShellList extends Component {
   input = null
   curPos = 0
 
-  
   constructor(props, state) {
     super(props)
     this.state = {}
@@ -41,6 +40,10 @@ export default class ShellList extends Component {
     clearTimeout(this.timeout);
   }
 
+  /**
+   * Display the Game of Shells.
+   * @return {div}
+   */
   render() {
     return (
       <div className="list">
@@ -50,6 +53,10 @@ export default class ShellList extends Component {
     )
   }
 
+  /**
+   * Get the HTML ball element
+   * @return {ul<Shell>} List of HTML shell containers.
+   */
   _getList() {
     const { shells } = this.props
     const len = shells.length
@@ -67,6 +74,10 @@ export default class ShellList extends Component {
     )
   }
 
+  /**
+   * Get the HTML ball element.
+   * @return {ul<li<input>>} Returns a little `<input type="radio"/>` button standing for the moving ball
+   */
   _getBall() {
     const { speed } = this.props
     return (
@@ -87,6 +98,12 @@ export default class ShellList extends Component {
     )
   }
 
+  /**
+   * On mouse over the container, user indicate his choice and we propagate the
+   * the event to display if this choice is correct
+   * @param {Number} index Index of the selected container, from 0 to n container.
+   * @return {Void}
+   */
   _onMouseOver(index) {
     const { isSuccess } = this.props
     isSuccess(this.curPos === index)
